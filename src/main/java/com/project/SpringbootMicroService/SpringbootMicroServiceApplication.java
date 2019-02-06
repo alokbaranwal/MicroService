@@ -18,12 +18,15 @@ public class SpringbootMicroServiceApplication {
 	@Autowired
 	private Configuration configuration;
 	
+	@Value("${db.username}")
+	private String username;
+	
 	@Value("${db.password}")
 	private String password;
 	
 	@GetMapping("/")
 	public String hello(){
-		return "Hello there! "+ configuration.getMinimum() + ", "+password;
+		return "Hello there! "+ configuration.getMinimum() +  ", "+username +", "+password;
 	}
 
 	public static void main(String[] args) {
