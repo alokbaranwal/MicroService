@@ -26,7 +26,7 @@ public class SpringbootMicroServiceApplication {
 	
 	@GetMapping("/")
 	public String hello(){
-		return "Hello there! "+ configuration.getMinimum() +  ", "+username +", "+password;
+		return "Hello,Hi there! "+ configuration.getMinimum() +  ", "+username +", "+password;
 	}
 
 	public static void main(String[] args) {
